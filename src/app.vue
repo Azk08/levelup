@@ -252,6 +252,16 @@ import NavigationBar from './component/NavigationBar.vue';
     }
 }
 
+@keyframes inifnite-scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
 @media screen and (max-width:780px) {
     .home {
         padding: 5rem;
@@ -268,15 +278,7 @@ import NavigationBar from './component/NavigationBar.vue';
         animation: inifnite-scroll 5s linear infinite;
     }
 
-    @keyframes inifnite-scroll {
-        from {
-            transform: translateX(0);
-        }
 
-        to {
-            transform: translateX(-100%);
-        }
-    }
 
     .about .isi {
         display: flex;
