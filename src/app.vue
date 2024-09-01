@@ -11,10 +11,12 @@ import NavigationBar from './component/NavigationBar.vue';
                 <h1><strong>Welcome</strong></h1>
                 <h2>To our market</h2>
             </div>
-            <div class="product">
-                <img src="./assets/1.png" alt="">
-                <img src="./assets/3.png" alt="">
-                <img src="./assets/2.png" alt="">
+            <div class="porduc-container">
+                <div class="product">
+                    <img src="./assets/1.png" alt="">
+                    <img src="./assets/3.png" alt="">
+                    <img src="./assets/2.png" alt="">
+                </div>
             </div>
         </section>
         <section id="about" class="about">
@@ -25,9 +27,7 @@ import NavigationBar from './component/NavigationBar.vue';
             <div class="isi">
                 <img src="./assets/logo.png" alt="">
                 <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dicta hic error sunt unde. Quia,
-                        voluptatibus dolores hic cumque velit deserunt, doloribus autem inventore corrupti eligendi, ea
-                        error? Quisquam, illo.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, sit!</p>
                     <a href="https://wa.me/6281319420292" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
                             viewBox="0 0 50 50">
@@ -68,21 +68,38 @@ import NavigationBar from './component/NavigationBar.vue';
                 <h1><strong>Welcome</strong></h1>
                 <h2>To our product</h2>
             </div>
-            <div class="card">
-                <img src="./assets/1.png" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card">
-                <img src="./assets/2.png" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card">
-                <img src="./assets/3.png" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
+            <div class="horizontal-scroll">
+                <div class="container">
+                    <div class="card">
+                        <img src="./assets/1.png" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/2.png" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/3.png" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/1.png" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/2.png" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/3.png" alt="">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </body>
 </template>
+
 <style scoped>
 .home {
     padding: 100px;
@@ -115,14 +132,16 @@ import NavigationBar from './component/NavigationBar.vue';
     padding: 100px;
 }
 
-.about .text a svg{
+.about .text a svg {
     width: 2rem;
 }
-.about  .isi .text{
+
+.about .isi .text {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .isi img {
     width: 20rem;
 }
@@ -143,26 +162,156 @@ import NavigationBar from './component/NavigationBar.vue';
 
 .market {
     padding: 100px;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
+    gap: 2rem;
+}
+
+.container {
+    display: flex;
+    /* flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; */
     gap: 2rem;
 }
 
 .market .card img {
-    width: 15rem;
+    width: 20rem;
     z-index: 0;
 }
 
-.market .card {
-    padding: 25px;
-    width: 26%;
+.container {
+    display: flex;
+    width: max-content;
+    padding: 1rem;
+}
+
+/* .horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-color: transparant transparant;
+    scroll-snap-type: 1 mandatory;
+} */
+
+.card {
+    /* animation: swing-in-right-bck 1s ease-in-out infinite; */
+    width: 15%;
     box-shadow: 0 0 10px black;
-    border-radius: 10px;
+    animation: inifnite-scroll 5s linear infinite;
+    padding: 1rem;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .market .text {
     width: 100%;
+}
+
+
+@-webkit-keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: rotateY(70deg);
+        transform: rotateY(70deg);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: rotateY(70deg);
+        transform: rotateY(70deg);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .home {
+        padding: 5rem;
+    }
+
+    .product-container {
+        overflow: hidden;
+    }
+
+    .home .product {
+        display: flex;
+        gap: 3rem;
+        padding: 1rem;
+        animation: inifnite-scroll 5s linear infinite;
+    }
+
+    @keyframes inifnite-scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .about .isi {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .about {
+        padding: 2.5rem;
+        width: 100%;
+    }
+
+    .about .isi .text svg {
+        gap: 1rem;
+    }
+
+    .about .isi .text {
+        z-index: 1;
+        overflow: auto;
+    }
+
+    .about .isi {
+        box-shadow: 0 0 10px black;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .isi img {
+        /* position: absolute; */
+        z-index: 0;
+    }
+
+    .market {
+        padding: 2.5rem;
+    }
+
 }
 </style>

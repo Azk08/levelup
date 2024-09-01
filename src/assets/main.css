@@ -12,7 +12,11 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
+}
+
+html::-webkit-scrollbar{
+    display: none;
 }
 
 html{

@@ -65,4 +65,11 @@ svg{
     background-color: white;
 }
 
+@media screen and (max-width:780px) {
+    nav{
+        width: 100%;
+        z-index: 100;
+    }
+}
+
 </style>
