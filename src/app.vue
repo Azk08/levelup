@@ -203,8 +203,9 @@ import NavigationBar from './component/NavigationBar.vue';
     box-shadow: 0 0 10px black;
     animation: inifnite-scroll 5s linear infinite;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 50px;
     flex-shrink: 0;
+    text-align: center;
 }
 
 .horizontal-scroll::-webkit-scrollbar {
@@ -216,7 +217,7 @@ import NavigationBar from './component/NavigationBar.vue';
 }
 
 
-@-webkit-keyframes swing-in-right-bck {
+/* @-webkit-keyframes swing-in-right-bck {
     0% {
         -webkit-transform: rotateY(70deg);
         transform: rotateY(70deg);
@@ -250,7 +251,7 @@ import NavigationBar from './component/NavigationBar.vue';
         transform-origin: right;
         opacity: 1;
     }
-}
+} */
 
 @keyframes inifnite-scroll {
         from {
