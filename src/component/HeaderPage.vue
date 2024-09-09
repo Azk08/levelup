@@ -5,11 +5,14 @@
             <h2>To our market</h2>
         </div>
         <div class="porduct-container">
-            <div class="product">
-                <img src="../assets/1.png" alt="">
-                <img src="../assets/3.png" alt="">
-                <img src="../assets/2.png" alt="">
-            </div>
+            <center>
+                <div class="product">
+                    <img src="../assets/1.png" alt="">
+                    <img src="../assets/3.png" alt="">
+                    <img src="../assets/2.png" alt="">
+                </div>
+            </center>
+
         </div>
     </section>
 </template>
@@ -34,7 +37,7 @@ export default {
 }
 
 .product img {
-    width: 300px;
+    width: 360px;
 }
 
 .product {
